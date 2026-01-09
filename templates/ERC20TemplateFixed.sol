@@ -2,12 +2,11 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
  * @title {{CLASS_NAME}}
- * @dev ERC-20 token with minting, burning, and ownership controls.
+ * @dev ERC-20 token with minting, and ownership controls.
  * Initial supply is hard-coded at 20,000,000 tokens.
  */
 contract {{CLASS_NAME}} is ERC20, Ownable {
