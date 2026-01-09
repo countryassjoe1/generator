@@ -31,7 +31,6 @@ contract {{CLASS_NAME}} is ERC20, ERC20Burnable, Ownable {
      * @param amountInUSD Amount in whole tokens to burn
      */
     (uint256 amountInUSD) external {
-        uint256 amount = amountInUSD * 10 ** uint256(decimals());
         _burn(msg.sender, amount);
     }
 
