@@ -1,19 +1,19 @@
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
 
-describe('TestUSD (ERC-20 with Burn)', function () {
+describe('USDC (ERC-20 with Burn)', function () {
   let Token, token, owner, addr1, addr2;
 
   beforeEach(async function () {
     [owner, addr1, addr2] = await ethers.getSigners();
-    Token = await ethers.getContractFactory('TestUSD');
+    Token = await ethers.getContractFactory('USD');
     token = await Token.deploy();
     await token.deployed();
   });
 
   it('has correct name, symbol and decimals', async function () {
-    expect(await token.name()).to.equal('TestUSD');
-    expect(await token.symbol()).to.equal('TUSD');
+    expect(await token.name()).to.equal('USD');
+    expect(await token.symbol()).to.equal('USDC');
     expect(await token.decimals()).to.equal(18);
   });
 
