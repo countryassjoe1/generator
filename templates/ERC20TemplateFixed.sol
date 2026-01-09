@@ -24,24 +24,5 @@ contract {{CLASS_NAME}} is ERC20, Ownable {
     function mint(address to, uint256 amountInUSD) external onlyOwner {
         uint256 amount = amountInUSD * 10 ** uint256(decimals());
         _mint(to, amount);
-    }
-
-    /**
-     * @notice Burn tokens from caller's balance
-     * @param amountInUSD Amount in whole tokens to burn
-     */
-    (uint256 amountInUSD) external {
-        _burn(msg.sender, amount);
-    }
-
-    /**
-     * @notice Burn tokens from a specific address (with allowance)
-     * @param from Address to burn tokens from
-     * @param amountInUSD Amount in whole tokens to burn
-     */
-    function burnFrom(address from, uint256 amountInUSD) external {
-        uint256 amount = amountInUSD * 10 ** uint256(decimals());
-        _spendAllowance(from, msg.sender, amount);
-        _burn(from, amount);
-    }
+       
 }
