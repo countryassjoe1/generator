@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @dev ERC-20 token with minting, burning, and ownership controls.
  * Initial supply is hard-coded at 20,000,000 tokens.
  */
-contract {{CLASS_NAME}} is ERC20, ERC20Burnable, Ownable {
+contract {{CLASS_NAME}} is ERC20, Ownable {
     constructor() ERC20("{{TOKEN_NAME}}", "{{TOKEN_SYMBOL}}") {
         uint256 initialSupply = {{INITIAL_SUPPLY}};
         _mint(msg.sender, initialSupply);
